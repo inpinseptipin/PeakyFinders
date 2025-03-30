@@ -1,0 +1,11 @@
+*.asv
+*.aux
+*.bbl
+*.synctex
+*.toc
+texput
+*.log
+*.blg
+*.out
+*.synctex.gz
+x64/
