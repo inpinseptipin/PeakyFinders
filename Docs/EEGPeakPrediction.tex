@@ -66,8 +66,8 @@ minimum width=3em, draw=black, fill=green]
 	\title{ \normalsize \textsc{}
 		\\ [2.0cm]
 		\HRule{1.5pt} \\
-		\LARGE \textbf{\uppercase{EEG Peak Prediction}
-			\HRule{2.0pt} \\ [0.6cm] \LARGE{Project} \vspace*{10\baselineskip}}
+		\LARGE \textbf{\uppercase{Peaky Finders}
+			\HRule{2.0pt} \\ [0.6cm] \LARGE{EEG Peak Prediction} \vspace*{10\baselineskip}}
 	}
 	\date{}
 	\author{\textbf{Author} \\ 
@@ -154,6 +154,21 @@ minimum width=3em, draw=black, fill=green]
 	
 	\subsection{N2}
 	This is a negative peak observed at 170-250 ms post stimulus. It is most prominent over frontocentral and central regions (Cz, Fz, Pz). N2 reflects higher-order auditory processing, involving cognitive and attentional mechanisms. It is particularly associated with the cognitive control of auditory attention and the detection of target stimuli in oddball paradigms. The amplitude of N2 is modulated by the saliency of the auditory stimulus.
+	
+	
+	\section{Dataset}
+	\subsection{Theory}
+	Sound-Induced Flash Illusion (SIFI) has become a valuable tool for investigating audiovisual (AV) processing in the brain. SIFI demonstrated that sound can influence visual perception, similar to how visual lipreading alters auditory perception in AV speech. Previously, the popular view among scholars was that information-processing circuits for different senses operate independently within the brain up to the cortex and vision dominates other senses (two ref). However, SIFI and other instances of multisensory interaction suggest that auditory dominates in some instances of SIFI. When different types of stimulation occur at the same time, there may be neural components in the brain associated with multi-sensory interaction.
+	
+	\subsection{Equipment Setup}
+	Two-channel electrode montages were placed on the subject's head to collect auditory and visual EEG signals. The auditory channel is composed of $C_z$ as the positive electrode, with the right and left mastoids (linked) as the negative electrode. It collects signals from the ear(Ear receives tone stimuli) to the auditory cortex (which processes auditory perception).
+	
+	The visual channel consists of $O_z$ as the positive elctrode and $F_z$ as the negative electrode. It collects signals from the eyes (which receive flash stimuli) to the visual cortex in the occipital lobe (which processes visual perception). $F_{pz}$ serves as the common ground electrode for both audio and visual channels to reduce the interference of external noise with the experiment.
+	
+	\subsection{Recording Process}
+	SmartEP software by IHS is used to record the EEG signal in real-time. The SIFI program was configured in SmartEP data collection software to present subjects with nine random combinations of flash and beep stimuli (0,1, or 2 times for one short routine), asking them to identify the stimuli they perceive. EEG data were collected during each trial, with a total of 256 sweeps (Poking the brain) with a sampling rate of 8000Hz or a sample is recorded every 125us. A 600 ms signal was recorded.
+	
+	
 	
 
 	
