@@ -1,5 +1,4 @@
 function [] = EEGPlot(x,fs,rowIndex,data,peakNames)
-
 xAxis = 0:1/fs:length(x)/fs;
 xAxis = xAxis(:,1:end-1)';
 figure;
@@ -10,7 +9,7 @@ for i = 1:size(peakNames,1)
     matchingColumns = startsWith(data.Properties.VariableNames,pattern);
     peakData = data(rowIndex,find(matchingColumns == 1));
     peakMatrix = table2array(peakData);
-    if ~isnan(peakMatrix)
+    if ~isnan(peakMatrix(:,:))
         position = peakMatrix(:,3);
         positionInSeconds = position/1000;
         positionInSampleIndex = round(positionInSeconds*fs);
@@ -19,7 +18,6 @@ for i = 1:size(peakNames,1)
         text(positionInSeconds, amp + 0.2, peakNames(i,:), 'Color', 'k');
         hold on;
     end
-    
 end
 xlabel("Time (s)")
 ylabel("Amplitude (uV)")
